@@ -1,0 +1,14 @@
+@startuml
+
+hide circle
+hide empty attributes
+hide empty methods
+
+class Point{
+
+}
+
+Ligne "0..*" -- "2" Point 
+
+
+@enduml
