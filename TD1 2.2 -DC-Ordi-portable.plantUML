@@ -1,1 +1,35 @@
+@startuml
 
+hide circle
+hide empty methods
+hide empty attributes
+
+class Portable {
+    prixAcaht
+    valeurActuelle
+}
+
+class Type {
+
+}
+
+Azerty --|> Type
+Qwerty --|> Type
+
+
+class Clavier {
+    type
+    touches
+}
+
+Clavier - "1" Type
+
+class Propietaire {
+    nom
+    prenom
+}
+
+Portable "1..*" -- "0..*" Propietaire
+Clavier "1" --* " " Portable
+
+@enduml
