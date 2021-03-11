@@ -1,0 +1,50 @@
+@startuml Societe canine
+'--------------------------------
+' Parametres pour le dessin
+'--------------------------------
+hide circle
+hide empty members
+hide empty methods
+'--------------------------------
+
+class Proprietaire {
+    nom 
+    adresse  
+}
+
+class Chien {
+    nom
+    numero
+    dateNaissance 
+    sexe 
+    race
+    datePossession
+}
+
+Chien - "1" Race
+
+class Race {
+
+}
+
+class Concours {   
+    date
+}
+
+class Ville {
+    dateOrg
+}
+
+class Participer {
+    classement
+}
+
+
+Proprietaire "1" -- "1..10" Chien
+Concours "0..1" - "*" Ville
+Concours "0..10" -- "2..*" Chien 
+
+(Concours,Chien) . Participer
+
+
+@enduml
