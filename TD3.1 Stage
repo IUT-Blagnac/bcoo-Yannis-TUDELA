@@ -1,0 +1,32 @@
+@startuml Stage
+'--------------------------------
+' Parametres pour le dessin
+'--------------------------------
+hide circle
+hide empty members
+hide empty methods
+'--------------------------------
+
+class Stage{
+    lieu
+    dateDebut
+    dateFin
+    entreprise
+    tuteur
+    theme
+}
+
+class Entreprise{
+    nom
+    adresse
+    siegeSocial
+}
+
+class Etudiant{
+    numINE
+    nom
+    prenom
+    moyenneGenerale
+}
+
+@enduml
