@@ -7,26 +7,51 @@ hide empty members
 hide empty methods
 '--------------------------------
 
-class Stage{
-    lieu
-    dateDebut
-    dateFin
-    tuteur
-    theme
+class Etudiant {
+    numINE
+    nom
+    prenom
+    moyenne_generale
+    note_stage
 }
 
 class Entreprise{
     nom
     adresse
-    siegeSocial
+    siege_social
 }
 
-class Etudiant{
-    numINE
+class Promotion{
+    nom
+}
+
+class GroupeTP{
+    nom
+}
+
+class GroupeTD{
+    numéro
+}
+
+class Stage{
+    lieu
+    date_début
+    date_fin
+    nom_tuteur
+    theme
+}
+
+class Enseignant{
     nom
     prenom
-    moyenneGenerale
+    specialite
 }
 
-Stage - "1" Entreprise
+Stage "*" -- "1" Entreprise
+Stage -- "1" Promotion
+Etudiant "*" - "1" GroupeTP
+GroupeTP -- "1" GroupeTD
+GroupeTD -- "1" Promotion
+Stage -- "0..1" Enseignant
+Stage "0..1" -- "0..1" Etudiant
 @enduml
