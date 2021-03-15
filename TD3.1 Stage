@@ -11,7 +11,6 @@ class Stage{
     lieu
     dateDebut
     dateFin
-    entreprise
     tuteur
     theme
 }
@@ -29,4 +28,5 @@ class Etudiant{
     moyenneGenerale
 }
 
+Stage - "1" Entreprise
 @enduml
