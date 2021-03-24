@@ -1,1 +1,14 @@
+@startuml
+actor Enseignant
+actor Etudiant
+actor EnseignantResponsable
 
+Enseignant <|-- EnseignantResponsable
+
+Enseignant -- (reserver des salles\n et du matériels)
+Enseignant -- (Consulter le planning\n des salles)
+Etudiant -- (Consulter planning\n des salles)
+Enseignant -- (consulter recapitulatif\n horaire)
+ER -- (Editer recapitulatif\n horaire)
+
+@enduml
