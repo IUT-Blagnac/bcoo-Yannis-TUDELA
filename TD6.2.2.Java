@@ -1,1 +1,24 @@
 
+public class Artisan{
+
+private String idSIRET;
+private String nomArt;
+private String adresseArt;
+private String tphArt;
+
+private Qualification maQualif;
+private ArrayList<Realiser> mesReals;
+
+
+public static getPayeArtisan(Chantier pfChantier){
+  double paye = 0;
+      for(int y = 0; y< this.mesReals.size() ; y++){
+          if(this.mesReals.get(y).idChantier == pfChantier.idChantier){
+              paye += this.get(y).getDureeReal();
+          }
+          
+      }
+ return this.maQualif.getTauxHoraire() * paye;
+}
+
+}
